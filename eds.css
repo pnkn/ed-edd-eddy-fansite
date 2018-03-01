@@ -1,0 +1,152 @@
+/* placing background image, needs to be centered */
+html {
+	background: url(img/backg2.jpg) no-repeat center center fixed; 
+	background-size: cover;
+}
+
+
+
+/* mobile first grid layout */
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100% 100% 100% 100%% 100% 100% 100% 100%;
+	grid-template-areas: 
+	"logo logo"
+	"bar bar"
+	"sum sum"
+	"rev rev"
+	"bio bio"
+	"slide slide"
+	"sidebar sidebar"
+	"footer footer";
+	grid-gap: 5px;
+	
+}
+
+
+
+/* styling specific grid cells */
+.logo {
+	grid-area: logo;
+	justify-self: center;
+	border: 2px solid black;
+	border-radius: 20px;
+}
+
+.bar {
+	grid-area: bar;
+	align-self: center;
+	justify-self: center;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	width: 250px;
+	justify-self: center;
+}
+
+.slide {
+	grid-area: slide;
+	text-align: center;
+}
+
+.sum {
+	grid-area: sum;
+	align-self: center;
+	text-align: center;
+	display: grid;
+}
+
+.rev {
+	grid-area: rev;
+	align-self: center;
+	text-align: center;
+}
+
+.bio {
+	grid-area: bio;
+	align-self: center;
+	text-align: center;
+}
+
+.footer {
+	grid-area: footer;
+	align-self: center;
+	text-align: center;
+	margin-bottom: -150px;
+}
+/* End grid cell styling */
+
+
+
+/* Making the Navigation bar, there's a better way probably */
+.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 1px solid black;
+	
+}
+
+.navbar a:link, a:visited {
+	display: block;
+	font-weight: bold;
+	color: #ffffff;
+	width: 150px;
+	text-align: center;
+	padding: 4px;
+	background-color: #98bf21;
+	text-decoration: none;
+}
+
+.navbar a:hover, a:active {
+	background-color: #7a991a;
+}
+
+.navbar li {
+	float: left;
+}
+/* End of Navigation bar */
+
+
+
+/* Give all text areas a tan color, round borders, slightly transparent */
+.sidebar, .sum, .rev, .bio, .footer {
+	background-color: tan;
+	opacity: 0.9;
+	border: 1px solid black;
+	border-radius: 15px;
+}
+
+
+
+/* desktop grid layout */
+@media screen and (min-width: 736px) {
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 330px 330px 330px 1fr;
+		grid-template-rows: 100% 40px 1fr 75% 80px 50px;
+		grid-template-areas: 
+		". logo bar bar ."
+		". sidebar . . ."
+		". sidebar sum sum ."
+		". sidebar slide slide ."
+		". sidebar rev bio ."
+		". footer footer footer .";
+	}
+	
+}
+
+
+
+/* changing color for debugging?
+.grid div:nth-child(even) {
+	background-color: red;
+}
+
+.grid div:nth-child(odd) {
+	background-color: green;
+}
+*/
