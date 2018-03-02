@@ -1,4 +1,4 @@
-/* placing background image, needs to be centered */
+/* placing background image */
 html {
 	background: url(img/backg2.jpg) no-repeat center center fixed; 
 	background-size: cover;
@@ -85,6 +85,7 @@ hr.style-two {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	margin-top: 15px;
 	margin-right: 25px;
+	background-color: #EF3340;
 }
 
 /* Grid cell for Slideshow */
@@ -92,6 +93,27 @@ hr.style-two {
 	grid-area: slide;
 	text-align: center;
 	margin-top: 5%;
+}
+
+/* Previous and Next buttons */
+.prev, .next {
+	cursor: pointer;
+	padding: 8px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	background-color: black;
+	position: absolute;
+	margin-top: 220px;
+	margin-left: -30px;
+	opacity: 0.7;
+}
+
+/* Placing 'next' button above 'previous' button */
+.next {
+	margin-top: 177px;
 }
 
 /* Sizing and borders of Slideshow images */
@@ -160,7 +182,7 @@ hr.style-two {
 	border: 1px solid black;
 	border-radius: 50%;
 	display: inline-block;
-	background-color: tan;
+	background-color: #FF8200;
 	color: black;
 	padding: 7px;
 	
@@ -189,7 +211,7 @@ hr.style-two {
 	border: 1px solid black;
 	border-radius: 5px;
 	display: inline-block;
-	background-color: tan;
+	background-color: #FFD100;
 	color: black;
 	opacity: 0.9;
 	padding: 3px 8px 3px 8px;
@@ -207,7 +229,7 @@ hr.style-two {
 	border: 1px solid black;
 	border-radius: 5px;
 	text-align: center;
-	background-color: #98bf21;
+	background-color: #949300;
 	
 }
 
@@ -218,12 +240,13 @@ hr.style-two {
 	width: 150px;
 	text-align: center;
 	padding: 4px;
-	background-color: #98bf21;
+	background-color: #949300;
 	text-decoration: none;
 }
 
 .navbar a:hover, a:active {
-	background-color: #7a991a;
+	color: #CB333B;
+	background-color: #FBDB65;
 }
 
 .navbar li {
@@ -233,20 +256,18 @@ hr.style-two {
 
 
 
-/* Give all text areas a tan color, round borders, slightly transparent */
+/* Give Sidebar and Summary cells color, round borders, slightly transparent */
 .sidebar, .sum {
-	background-color: tan;
+	background-color: #FFD100;
 	opacity: 0.9;
 	border: 1px solid black;
 	border-radius: 15px;
 }
 
-
+/* Changing font for Navigation, Sidebar, Summary, Reviews and Bios */
 .bar, .sidebar, .sum, .rev, .bio {
 	font-family: 'Kalam', cursive;
 }
-
-
 
 
 /* desktop grid layout */
@@ -264,6 +285,7 @@ hr.style-two {
 		". footer footer footer .";
 	}
 	
+	/* Grid cell for logo */
 	.logo {
 	grid-area: logo;
 	justify-self: center;
@@ -273,23 +295,48 @@ hr.style-two {
 	height: 260px;
 	}
 
+	/* Rounding the image inside of the Logo cell */
 	.logo img {
 	border-radius: 20px;
 	}
 	
+	/* Grid cell for Slideshow */
 	.slide {
 		margin-top: 5px;
 	}
 	
+	/* Previous and Next buttons */
+	.prev, .next {
+	cursor: pointer;
+	padding: 8px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	background-color: black;
+	position: absolute;
+	margin-top: 405px;
+	margin-left: -30px;
+	}
+
+	/* Placing the 'next' button on top of the 'previous' button */
+	.next {
+	margin-top: 360px;
+	}
+	
+	/* Resizing the images inside of Slideshow cell */
 	.slide img {
 		width: 650px;
 		height: 450px;
 	}
 	
+	/* Text inside of Reviews and Bios links */
 	.rev span, .bio span {
 		margin: 23px;
 	}
 	
+	/* Grid cell for Footer */
 	.footer {
 	grid-area: footer;
 	align-self: center;
@@ -297,28 +344,16 @@ hr.style-two {
 	margin-top: 150px;
 	margin-bottom: 50px;
 	}
-
+	
+	/* Text inside Footer cell */
 	.footer span {
 	font-size: 14px;
 	border: 1px solid black;
 	border-radius: 5px;
 	display: inline-block;
-	background-color: tan;
 	color: black;
 	opacity: 0.9;
 	padding: 3px 8px 3px 8px;
 	}
 	
 }
-
-
-
-/* changing color for debugging?
-.grid div:nth-child(even) {
-	background-color: red;
-}
-
-.grid div:nth-child(odd) {
-	background-color: green;
-}
-*/
