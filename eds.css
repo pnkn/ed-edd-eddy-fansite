@@ -31,13 +31,23 @@ html {
 	grid-area: logo;
 	justify-self: center;
 	border: 2px solid black;
+	border-bottom: 3px solid black;
 	border-radius: 20px;
+	height: 260px;
+}
+
+.logo img {
+	border-radius: 20px;
+}
+
+.logo, .logo img {
+	width: 320px;
 }
 
 .bar {
 	grid-area: bar;
 	align-self: center;
-	justify-self: center;
+	justify-self: right;
 }
 
 .sidebar {
@@ -51,6 +61,21 @@ html {
 	text-align: center;
 }
 
+/* background and border of slideshow */
+.slide {
+	border: 2px solid black;
+	padding-top: 5px;
+	background-color: tan;
+	border-radius: 5px;
+}
+
+.slide img {
+	width: 317px;
+	height: 265px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
 .sum {
 	grid-area: sum;
 	align-self: center;
@@ -62,12 +87,56 @@ html {
 	grid-area: rev;
 	align-self: center;
 	text-align: center;
+	background-image: url("img/blue_blank.jpg");
+	margin-right: 20px;
+}
+
+.review_img {
+	float: left;
+	width: 95px;
+	height: 95px;
+	border-radius: 5px;
+	border-right: 2px solid black;
 }
 
 .bio {
 	grid-area: bio;
 	align-self: center;
 	text-align: center;
+	background-image: url("img/reverse_blue_blank.jpg");
+	margin-left: 20px;
+}
+
+.bio_img {
+	float: right;
+	width: 95px;
+	height: 95px;
+	border-radius: 5px;
+	border-left: 2px solid black;
+}
+
+/* border around text inside review and bio links*/
+.rev span, .bio span {
+	margin-top:35px;
+	font-size: 20px;
+	border: 1px solid black;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: tan;
+	color: black;
+	padding: 7px;
+	
+}
+
+.rev, .bio {
+	border-radius: 5px;
+	border:2px solid black;
+}
+
+.rev a, .bio a {
+	text-decoration: none;
+	color: black;
+	
 }
 
 .footer {
@@ -87,6 +156,9 @@ html {
 	padding: 0;
 	overflow: hidden;
 	border: 1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #98bf21;
 	
 }
 
@@ -106,14 +178,14 @@ html {
 }
 
 .navbar li {
-	float: left;
+	display: inline-block;
 }
 /* End of Navigation bar */
 
 
 
 /* Give all text areas a tan color, round borders, slightly transparent */
-.sidebar, .sum, .rev, .bio, .footer {
+.sidebar, .sum, .footer {
 	background-color: tan;
 	opacity: 0.9;
 	border: 1px solid black;
@@ -127,14 +199,41 @@ html {
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr 330px 330px 330px 1fr;
-		grid-template-rows: 100% 40px 1fr 75% 80px 50px;
+		grid-template-rows: 100% 40px 180px 180px 75% 50px;
 		grid-template-areas: 
 		". logo bar bar ."
 		". sidebar . . ."
 		". sidebar sum sum ."
-		". sidebar slide slide ."
 		". sidebar rev bio ."
+		". sidebar slide slide ."
 		". footer footer footer .";
+	}
+	
+	.logo {
+	grid-area: logo;
+	justify-self: center;
+	border: 2px solid black;
+	border-bottom: 3px solid black;
+	border-radius: 20px;
+	height: 260px;
+	}
+
+	.logo img {
+	border-radius: 20px;
+
+	}
+	
+	/* background and border of slideshow */
+	.slide {
+	border: 2px solid black;
+	padding-top: 5px;
+	background-color: tan;
+	border-radius: 5px;
+	}
+	
+	.slide img {
+		width: 650px;
+		height: 450px;
 	}
 	
 }
